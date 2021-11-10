@@ -66,9 +66,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 # SocialMediaSederhana
 
-1.donwload
-2.extract
-3.composer install
-4.buat database dengan nama network
-5.php artisan migrate --seed
-6.php artisan serve
+-   1.donwload
+-   2.extract
+-   3.composer install
+-   4.buat database dengan nama network
+-   5.php artisan migrate --seed
+-   6.php artisan serve
