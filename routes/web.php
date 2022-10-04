@@ -39,7 +39,7 @@ Route::middleware(['auth'])->group(function () {
         // Route::post('{user}', [FollowingController::class, 'store'])->name('following.store');
         Route::post('{user}/unfollow', [FollowingController::class, 'unFollow'])->name('unfollow.store');
         Route::post('{user}/follow', [FollowingController::class, 'follow'])->name('follow.store');
-        Route::get('{user}', ProfileInformationController::class)->name('profile');
+        Route::get('{user:username}', ProfileInformationController::class)->name('profile');
     });
 });
 
