@@ -4,7 +4,7 @@ namespace App\Traits;
 
 use App\Models\User;
 
-Trait following {
+Trait Following {
 
     public function follows()
     {
