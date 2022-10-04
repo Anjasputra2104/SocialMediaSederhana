@@ -35,10 +35,10 @@ Route::middleware(['auth'])->group(function () {
         Route::put('update', [UpdateProfileInformationController::class, 'update'])->name('profile.update');
         Route::get('password/edit', [PasswordUpdateController::class, 'edit'])->name('password.edit');
         Route::put('password/edit', [PasswordUpdateController::class, 'update']);
-        Route::get('{user}/{following}', [FollowingController::class, 'index'])->name('following.index');
+        Route::get('{user:username}/{following:username}', [FollowingController::class, 'index'])->name('following.index');
         // Route::post('{user}', [FollowingController::class, 'store'])->name('following.store');
-        Route::post('{user}/unfollow', [FollowingController::class, 'unFollow'])->name('unfollow.store');
-        Route::post('{user}/follow', [FollowingController::class, 'follow'])->name('follow.store');
+        Route::post('{user:username}/unfollow', [FollowingController::class, 'unFollow'])->name('unfollow.store');
+        Route::post('{user:username}/follow', [FollowingController::class, 'follow'])->name('follow.store');
         Route::get('{user:username}', ProfileInformationController::class)->name('profile');
     });
 });
